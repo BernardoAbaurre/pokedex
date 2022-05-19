@@ -1,0 +1,96 @@
+body
+{
+    font: 20pt arial;
+    text-align: center;
+    background-color: #FFCC01;
+}
+#pokedex
+{
+    width: 693px;
+    height: 525px;
+    margin: auto;
+    background-image: url('imagens/pokedex.png');
+    display: grid;
+    grid-template-columns: 378px 315px;
+    grid-template-rows: 1fr;
+    border-radius: 12px;
+}
+p
+{
+    margin: 5px;
+}
+#sobre
+{
+    text-align: left;
+}
+#imgPokemon
+{
+    height: auto;
+    width: 300px;
+    margin: auto;
+    vertical-align: middle;
+}
+.imgTipo
+{
+    margin-left: 10px;
+    vertical-align: middle;
+    width: 40px;
+}
+#valor
+{
+    width: 500px;
+    height: 30px;
+    margin: 20px;
+}
+#pkdxLeft
+{
+    width: 378px;
+    height: 525px;
+    /* border: 1px dashed blue; */
+    grid-area:  1 / 1 / 2 / 2;
+    display: grid;
+    grid-template-columns: 25px 293px 70px;
+    grid-template-rows: 131px 299px 93px;
+}
+#displayLeft
+{
+    display: flex;
+    margin: 0px;
+    background-color: #76ACD2;
+    /* border: 3px black dashed; */
+    grid-area: 2 / 2 / 3 / 3;
+}
+#pkdxRight
+{
+    text-align: left;
+    grid-area: 1 / 2 / 2 / 3;
+    /* border: solid blue 1px; */
+    width: 315px;
+    height: 515px;
+    margin: 0px;
+    display: grid;
+    grid-template-columns: 27px 264px 31px;
+    grid-template-rows: 137px 329px 60px;
+}
+#displayRight
+{
+    list-style-type: square;
+    background-color: #76ACD2;
+    border: 13px solid #B3B4B3;
+    border-radius: 12px;
+    grid-area: 2 / 2 / 3 / 3;
+}
+#lista
+{
+    padding: 7px;
+    list-style-type: none;
+}
+#lista li
+{
+    margin-top: 10px;
+    font-family: Digital;
+}
+@font-face {
+    font-family:'DIGITAL' ;
+    src: url('DS-DIGII.TTF') format('opentype');
+}
