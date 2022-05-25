@@ -15,8 +15,8 @@ async function calcular()
             tipos.getElementsByTagName('li')[i].remove()
         }
     }
-    id.innerHTML= '<b>ID:</b>'
-    nome.innerHTML = `<b>Nome:</b>${pokemonIn}`
+    id.innerHTML= '<b>Index:</b>'
+    nome.innerHTML = `<b>Nome:</b>${pokemonOut.species.name}`
     id.innerHTML += `${pokemonOut.id}`
     for(var i = 0; i < pokemonOut.types.length; i++)
     {
