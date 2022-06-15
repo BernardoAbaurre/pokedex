@@ -4,6 +4,14 @@ body
     text-align: center;
     background-color: #FFCC01;
 }
+#title
+{
+    width: 50vw;
+    height: 20vw;
+    max-width: 450px;
+    max-height: 180px;
+    margin: 0;
+}
 #pokedex
 {
     width: 693px;
@@ -51,14 +59,26 @@ p
 }
 #botao
 {
+    text-align: center;
     font-size: 20pt;
-    margin-bottom: 20px;
+    margin-bottom: 27px;
     background:#ffcc00;
     border:5px solid #375daa;
     border-radius: 11px;
-    box-shadow: 0 5px #444444;
-    padding: 20px 45px;
+    box-shadow: 0 7px #444444;
+    padding: 10px 10px;
     color:#375daa;
+    cursor: pointer;
+    height: 10vh;
+    width: 15vw;
+    min-width: fit-content;
+    min-height: fit-content;
+    transition: 0.2s all;
+}
+#botao:active
+{
+    transform: scale(0.98);
+    box-shadow: 0px 0px;
 }
 #pkdxLeft
 {
