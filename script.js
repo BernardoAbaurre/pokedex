@@ -10,9 +10,9 @@ async function calcular()
     var imagem = document.getElementById('imgPokemon')
     if(tipos.childElementCount > 0)
     {
-        for (var i = 0;i < tipos.getElementsByTagName('li').length; i++)
+        for (var i = 0;i <= tipos.getElementsByTagName('li').length; i++)
         {
-            tipos.getElementsByTagName('li')[i].remove()
+            tipos.getElementsByTagName('li')[0].remove()
         }
     }
     id.innerHTML= '<b>Index:</b>'
