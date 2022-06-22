@@ -42,7 +42,7 @@ p
 {
     margin-left: 10px;
     vertical-align: middle;
-    width: 40px;
+    width: 30px;
 }
 #valor
 {
@@ -125,9 +125,13 @@ p
 }
 #lista li
 {
-    margin-top: 10px;
+    margin-top: 5px;
     font-family: Digital;
 }
+/* #fraquezas
+{
+    display: flex;
+} */
 @font-face {
     font-family:'DIGITAL' ;
     src: url('DS-DIGII.TTF') format('opentype');
