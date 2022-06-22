@@ -64,8 +64,10 @@ async function calcular()
     for (var f = 0; f < fraqArrayUnique.length; f++)
     {
         var nodeli = document.createElement('li')
-        var textnode = document.createTextNode(fraqArrayUnique[f])
-        nodeli.appendChild(textnode)
+        nodeimg = document.createElement('img')
+        nodeimg.setAttribute('src', 'imagens/px-Pokémon_'+fraqArrayUnique[f]+'_Type_Icon.svg.png')
+        nodeimg.setAttribute('class', 'imgTipo')
+        nodeli.appendChild(nodeimg)
         fraquezas.appendChild(nodeli)
     }
     imagem.src = `${pokemonOut.sprites.front_default}`

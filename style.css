@@ -128,10 +128,15 @@ p
     margin-top: 5px;
     font-family: Digital;
 }
-/* #fraquezas
+#fraquezas
 {
     display: flex;
-} */
+    list-style-type: none;
+    padding:0;
+    text-align: center;
+    margin: auto;
+}
+
 @font-face {
     font-family:'DIGITAL' ;
     src: url('DS-DIGII.TTF') format('opentype');
