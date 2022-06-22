@@ -1,4 +1,4 @@
-const { set } = require("express/lib/application")
+// const { set } = require("express/lib/application")
 
 async function calcular()
 {
@@ -14,7 +14,7 @@ async function calcular()
     id.innerHTML= '<b>Index:</b>'
     nome.innerHTML = `<b>Nome:</b>${pokemonOut.species.name}`
     id.innerHTML += `${pokemonOut.id}`
-    // tipos----------------------------------------------------
+    // clean
     if(tipos.childElementCount > 0)
     {
         for (var i = 0;i <= tipos.getElementsByTagName('li').length; i++)
@@ -22,6 +22,16 @@ async function calcular()
             tipos.getElementsByTagName('li')[0].remove()
         }
     }
+    if(fraquezas.childElementCount > 0)
+    {
+        const qt = fraquezas.getElementsByTagName('li').length
+        // alert(fraquezas.childElementCount)
+        for (var p = 0;p < qt; p++)
+        {
+            fraquezas.getElementsByTagName('li')[0].remove()
+        }
+    }
+    // tipos----------------------------------------------------
     for(var i = 0; i < pokemonOut.types.length; i++)
     {
         var nodeli = document.createElement('li')
