@@ -14,7 +14,7 @@ async function calcular()
     id.innerHTML= '<b>Index:</b>'
     nome.innerHTML = `<b>Nome:</b>${pokemonOut.species.name}`
     id.innerHTML += `${pokemonOut.id}`
-    // clean
+    // clear
     if(tipos.childElementCount > 0)
     {
         for (var i = 0;i <= tipos.getElementsByTagName('li').length; i++)
@@ -24,24 +24,24 @@ async function calcular()
     }
     if(fraquezas.childElementCount > 0)
     {
-        const qt = fraquezas.getElementsByTagName('li').length
+        const qt = fraquezas.getElementsByTagName('nav').length
         // alert(fraquezas.childElementCount)
         for (var p = 0;p < qt; p++)
         {
-            fraquezas.getElementsByTagName('li')[0].remove()
+            fraquezas.getElementsByTagName('nav')[0].remove()
         }
     }
     // tipos----------------------------------------------------
     for(var i = 0; i < pokemonOut.types.length; i++)
     {
-        var nodeli = document.createElement('li')
+        var nodenavf = document.createElement('li')
         var textnode = document.createTextNode(pokemonOut.types[i].type.name)
         nodeimg = document.createElement('img')
         nodeimg.setAttribute('src', 'imagens/px-Pokémon_'+ pokemonOut.types[i].type.name +'_Type_Icon.svg.png')
         nodeimg.setAttribute('class', 'imgTipo')
-        nodeli.appendChild(textnode)
-        nodeli.appendChild(nodeimg)
-        tipos.appendChild(nodeli)
+        nodenavf.appendChild(textnode)
+        nodenavf.appendChild(nodeimg)
+        tipos.appendChild(nodenavf)
     }
     // fraquezas------------------------------------------------
     var fraqArray = new Array()
@@ -127,12 +127,12 @@ async function calcular()
     var fraqArrayUnique = [...new Set(fraqArray)]
     for (var f = 0; f < fraqArrayUnique.length; f++)
     {
-        var nodeli = document.createElement('li')
+        var nodenavf = document.createElement('nav')
         nodeimg = document.createElement('img')
         nodeimg.setAttribute('src', 'imagens/px-Pokémon_'+fraqArrayUnique[f]+'_Type_Icon.svg.png')
         nodeimg.setAttribute('class', 'imgTipo')
-        nodeli.appendChild(nodeimg)
-        fraquezas.appendChild(nodeli)
+        nodenavf.appendChild(nodeimg)
+        fraquezas.appendChild(nodenavf)
     }
     imagem.src = `${pokemonOut.sprites.front_default}`
     imagem.setAttribute('width','500')
