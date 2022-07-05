@@ -51,13 +51,77 @@ async function calcular()
     }
     function fraqueza(type)
     {
-        if (type == 'fire')
+        if (type == 'bug')
         {
-            fraqArray.push('water','rock','ground')
+            fraqArray.push('flying','rock','fire')
+        }
+        else if (type == 'dark')
+        {
+            fraqArray.push('bug','fairy','fighting')
+        }
+        else if (type == 'dragon')
+        {
+            fraqArray.push('dragon','fairy','ice')
+        }
+        else if (type == 'electric')
+        {
+            fraqArray.push('ground')
         }
         else if (type == 'flying')
         {
             fraqArray.push('rock','ice','electric')
+        }
+        else if (type == 'normal')
+        {
+            fraqArray.push('fighting')
+        }
+        else if (type == 'fighting')
+        {
+            fraqArray.push('flying','psychic','fairy')
+        }
+        else if (type == 'poison')
+        {
+            fraqArray.push('ground','psychic')
+        }
+        else if (type == 'ground')
+        {
+            fraqArray.push('water','grass','ice')
+        }
+        else if (type == 'rock')
+        {
+            fraqArray.push('fighting','ground','steel','water','grass')
+        }
+        else if (type == 'ghost')
+        {
+            fraqArray.push('ghost','dark')
+        }
+        else if (type == 'fire')
+        {
+            fraqArray.push('ground','rock','water')
+        }
+        else if (type == 'water')
+        {
+            fraqArray.push('grass','electric')
+        }
+        else if (type == 'grass')
+        {
+            fraqArray.push('flying','poison','bug','fire','ice')
+        }
+        else if (type == 'psychic')
+        {
+            fraqArray.push('bug','ghost','dark')
+        }
+        else if (type == 'ice')
+        {
+            fraqArray.push('fighting','rock','steel','fire')
+        }
+        else if (type == 'fairy')
+        {
+            fraqArray.push('poison','steel')
+        }
+        else if (type == 'steel')
+        {
+            fraqArray.push('fighting','ground','fire')
         }
     }
     var fraqArrayUnique = [...new Set(fraqArray)]
