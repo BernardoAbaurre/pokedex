@@ -31,6 +31,10 @@ async function calcular()
             fraquezas.getElementsByTagName('nav')[0].remove()
         }
     }
+    if (document.getElementsByClassName('f2').length > 0)
+    {
+        document.getElementsByClassName('f2')[0].remove()
+    }
     // tipos----------------------------------------------------
     for(var i = 0; i < pokemonOut.types.length; i++)
     {
@@ -125,14 +129,32 @@ async function calcular()
         }
     }
     var fraqArrayUnique = [...new Set(fraqArray)]
+    if (fraqArrayUnique.length > 5)
+    {
+        var nodedivf2 = document.createElement('div')
+        nodedivf2.setAttribute('class','f2')
+        document.getElementById('listaFraq').appendChild(nodedivf2)
+    }
     for (var f = 0; f < fraqArrayUnique.length; f++)
     {
-        var nodenavf = document.createElement('nav')
-        nodeimg = document.createElement('img')
-        nodeimg.setAttribute('src', 'imagens/px-Pokémon_'+fraqArrayUnique[f]+'_Type_Icon.svg.png')
-        nodeimg.setAttribute('class', 'imgTipo')
-        nodenavf.appendChild(nodeimg)
-        fraquezas.appendChild(nodenavf)
+        if (f <= 4)
+        {
+            var nodenavf = document.createElement('nav')
+            nodeimg = document.createElement('img')
+            nodeimg.setAttribute('src', 'imagens/px-Pokémon_'+fraqArrayUnique[f]+'_Type_Icon.svg.png')
+            nodeimg.setAttribute('class', 'imgTipo')
+            nodenavf.appendChild(nodeimg)
+            fraquezas.appendChild(nodenavf)
+        }
+        else
+        {
+            var nodenavf = document.createElement('nav')
+            nodeimg = document.createElement('img')
+            nodeimg.setAttribute('src', 'imagens/px-Pokémon_'+fraqArrayUnique[f]+'_Type_Icon.svg.png')
+            nodeimg.setAttribute('class', 'imgTipo')
+            nodenavf.appendChild(nodeimg)
+            document.getElementsByClassName('f2')[0].appendChild(nodenavf)
+        }
     }
     imagem.src = `${pokemonOut.sprites.front_default}`
     imagem.setAttribute('width','500')

@@ -128,13 +128,18 @@ p
     margin-top: 5px;
     font-family: Digital;
 }
-#fraquezas
+#fraquezas, .f2
 {
     display: flex;
     list-style-type: none;
     padding:0;
     text-align: center;
     margin: auto;
+}
+
+.f2
+{
+    margin-top: 7px;
 }
 
 @font-face {
